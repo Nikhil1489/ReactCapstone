@@ -1,3 +1,0 @@
-# ReactCapstone
-
-Test commit
