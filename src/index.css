@@ -1,5 +1,11 @@
 :root {
   --font-family: "Inter", sans-serif;
+  --primary-color-1: #f4ce14;
+  --primary-color-2: #495e57;
+  --secondary-color-1: #ee9972;
+  --secondary-color-2: #fbdabb;
+  --secondary-color-3: #edefee;
+  --secondary-color-4: #333333;
 }
 
 body {
@@ -91,10 +97,217 @@ nav ul li a {
 }
 
 .siteFooter {
-  height: 80px;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
+  margin: 4rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.hero {
+  background-color: var(--primary-color-2);
+  margin-bottom: 2rem;
+}
+.hero-section {
+  max-width: 887px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.hero-text {
+  max-width: 422px;
+}
+
+.hero-text h1 {
+  color: var(--primary-color-1);
+  font-size: clamp(2.8rem, 8vw, 4rem);
+  line-height: 0.6;
+}
+
+.hero-text h4 {
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  color: #fff;
+  font-size: clamp(0.9rem, 4vw, 1.25rem);
+  margin-bottom: 2rem;
+}
+
+button {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  width: 200px;
+  height: 60px;
+  color: var(--secondary-color-4);
+  background-color: var(--primary-color-1);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 375px;
+  height: fit-content;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 740px) {
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+
+  .hero-text,
+  .hero-image img {
+    max-width: 740px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  button {
+    font-size: 14px;
+    width: 150px;
+    height: 50px;
+  }
+}
+
+.footer-section {
+  max-width: 887px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer__logo img {
+  max-width: 100%;
+}
+
+footer h4 {
+  font-size: 21px;
+  margin: 0 0 0.5rem;
+}
+
+.footer__menu,
+.social__links,
+address {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 15px;
+  font-style: normal;
+}
+
+.siteFooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.siteFooter a {
+  text-decoration: none;
+  color: #333333;
+}
+
+form,
+.booking__title {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.booking__title {
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.booking__title h1 {
+  color: var(--primary-color-2);
+  text-align: center;
+  font-size: 2rem;
+}
+
+label {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  color: var(--primary-color-2);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--secondary-color-3);
+  outline: none;
+  color: var(--primary-color-2);
+  font-family: var(--secondary-font);
+}
+
+.choose__date,
+.choose__time,
+.number__guests,
+.occasion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+
+#occasion,
+#res-time {
+  border: none;
+  cursor: pointer;
+}
+
+.submit__btn {
+  width: 100%;
+  background-color: var(--primary-color-1);
+  color: var(--primary-color-2);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: 0.3s all;
+}
+
+.submit__btn:hover {
+  background-color: var(--primary-color-2);
+  color: var(--primary-color-1);
+}
+
+.field__error {
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 0.2rem;
+}
+
+.restaurantBanner {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.restaurantBanner img {
+  max-height: 600px;
 }

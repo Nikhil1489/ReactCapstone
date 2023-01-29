@@ -3,6 +3,29 @@ import lemonDessert from "../assets/lemon_dessert.jpg";
 import bruchetta from "../assets/bruchetta.svg";
 
 export const Main = () => {
+
+
+    const specialMenus = [
+        {
+            image: greekSaladImage,
+            title: 'Greek Salad',
+            price: '$12.99',
+            desc: 'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.'
+        },
+        {
+            image: lemonDessert,
+            title: 'Bruchetta',
+            price: '$5.99',
+            desc: 'Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.'
+        },
+        {
+            image: bruchetta,
+            title: 'Lemon Dessert',
+            price: '$5.00',
+            desc: 'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.'
+        }
+    ];
+
     return (
         <>
             <main>
@@ -13,39 +36,21 @@ export const Main = () => {
                     </div>
                     <div className="specialsList">
                         <ul>
-                            <li>
-                                <div className="specialsImage"><img src={greekSaladImage} alt="" /></div>
-                                <div className="specialsContent">
-                                    <div className="specialsHeading">
-                                        <h3>Greek salad</h3>
-                                        <span className="price">$12.99</span>
-                                    </div>
-                                    <p>The famous greek salad of cripsy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemarry croutons.</p>
-                                    <button>Order a delivery</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="specialsImage"><img src={bruchetta} alt="" /></div>
-                                <div className="specialsContent">
-                                    <div className="specialsHeading">
-                                        <h3>Bruchetta $12.99</h3>
-                                        <span className="price">$5.89</span>
-                                    </div>
-                                    <p>The famous greek salad of cripsy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemarry croutons.</p>
-                                    <button>Order a delivery</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="specialsImage"><img src={lemonDessert} alt="" /></div>
-                                <div className="specialsContent">
-                                    <div className="specialsHeading">
-                                        <h3>Lemon Dessert $12.99</h3>
-                                        <span className="price">$5.00</span>
-                                    </div>
-                                    <p>The famous greek salad of cripsy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemarry croutons.</p>
-                                    <button>Order a delivery</button>
-                                </div>
-                            </li>
+                            {specialMenus.map((specialMenu) => {
+                                return (
+                                    <li>
+                                        <div className="specialsImage"><img src={specialMenu.image} alt="" /></div>
+                                        <div className="specialsContent">
+                                            <div className="specialsHeading">
+                                                <h3>{specialMenu.title}</h3>
+                                                <span className="price">{specialMenu.price}</span>
+                                            </div>
+                                            <p>{specialMenu.desc}</p>
+                                            <button>Order a delivery</button>
+                                        </div>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </div>
                 </div>
