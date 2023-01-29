@@ -2,7 +2,7 @@
 export const Footer = () => {
     return (
         <>
-            <footer>Copyright 2023 Little lemon restaurant</footer>
+            <footer className="siteFooter">Copyright 2023 Little lemon restaurant</footer>
         </>
     );
 }

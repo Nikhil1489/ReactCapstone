@@ -35,3 +35,66 @@ nav ul li a {
   align-items: center;
   align-content: center;
 }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.specials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specialsList ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.specialsList ul li {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 0 0 1rem;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #edefee;
+}
+
+.specialsHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.specialsImage {
+  width: 100%;
+}
+
+.specialsImage img {
+  width: 100%;
+  vertical-align: top;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.specialsContent {
+  padding: 0 1rem;
+}
+
+.siteFooter {
+  height: 80px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
